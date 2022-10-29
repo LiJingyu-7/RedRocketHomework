@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .box1 {
+            width: 320px;
+            height: 500px;
+            padding: 10px;
+            margin-right: 20px;
+            border: 1px solid black;
+            display: flex;
+            flex-shrink: 0;
+        }
+
+        .box2 {
+            width: 320px;
+            height: 300px;
+            padding: 10px;
+            margin-right: 20px;
+            border: 1px solid black;
+            display: flex;
+            flex-grow: 1;
+            transition-duration: 7s;
+        }
+
+        .box3 {
+            width: 320px;
+            height: 100px;
+            padding: 10px;
+            margin-right: 20px;
+            border: 1px solid black;
+            display: flex;
+            transition-duration: 7s;
+            align-self: flex-start;
+            flex-grow: 0.1;
+        }
+
+        .box4 {
+            width: 320px;
+            height: 600px;
+            padding: 10px;
+            margin-right: 20px;
+            border: 1px solid black;
+            display: flex;
+            flex-grow: 10;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        一号盒子
+        <p>我始终保持原大小，不缩放。</p>
+    </div>
+    <div class="box2">
+        二号盒子
+        <p>浏览器界面变宽时，我占满其他元素剩下的所有空间</p>
+    </div>
+    <div class="box3">
+        三号盒子
+        <p>我和四号盒子的顶部对齐</p>
+    </div>
+    <div class="box4">
+        四号盒子
+        <p>浏览器界面变窄时，我缩窄的速度要比二、三号盒子快</p>
+    </div>
+</body>
+
+</html>
